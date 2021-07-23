@@ -1,3 +1,3 @@
 module.exports = {
-    publicPath: 'lakfu'
+    publicPath: '/lakfu/'
 }
