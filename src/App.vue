@@ -1,13 +1,13 @@
 <template>
-  <body>
+<body>
      <div>
 
   <img alt="Lakfu" src="./assets/icons/target.png">
-  <h1> Welcome to Lakfu </h1>
-  <button class="button">I'm an entrepreneur</button>
+  <h1 class="animate__animated animate__bounce"> Welcome to Lakfu </h1>
+  <button class="button">Click here if you're an Entreprenur </button>
   <br>
   <br>
-  <button class="button">I'm an investor</button>
+  <button class="button">Click here if you're an investor</button>
   </div>
   </body>
  
@@ -27,6 +27,7 @@ export default {
 </script>
 
 <style>
+
 body{
   background-image: url('./assets/detroit.jpg');
   background-repeat: no-repeat;
