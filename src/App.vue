@@ -4,10 +4,14 @@
 
   <img alt="Lakfu" class="animate__animated  animate__fadeIn" src="./assets/icons/target.png">
   <h1 class="animate__animated animate__bounce"> Welcome to Lakfu </h1>
-  <button class="button animate__animated animate__backInRight" style="background-color: yellow; color: black">Entreprenur Login</button>
+  <router-link  to="/Investorlogin">  <button class="button animate__animated animate__backInLeft" >Investor Login</button> </router-link>
   <br>
+   <br> 
+  <router-link to="/Entreprenurlogin"><button class="button animate__animated animate__backInRight" style="background-color: yellow; color: black">Entreprenur Login</button></router-link>
   <br>
-  <button class="button animate__animated animate__backInLeft">Investor Login</button>
+  <router-view/>
+  
+  <!-- <button class="button animate__animated animate__backInLeft" >Investor Login</button> -->
   <br>
   </div>
   </body>
@@ -45,6 +49,11 @@ h1{
   border-radius: 25px;
   padding: 1%;
   border: none;
+  
+}
+
+a{
+  text-decoration: none;
 }
 /* debug this in the future */
 .button:hover {
