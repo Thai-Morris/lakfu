@@ -8,6 +8,7 @@
   <br>
   <br>
   <button class="button animate__animated animate__backInLeft">Investor Login</button>
+  <br>
   </div>
   </body>
 
@@ -29,7 +30,6 @@ export default {
 body{
   background-image: url('./assets/detroit.jpg');
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-position: center; 
 }
 
@@ -40,29 +40,17 @@ h1{
 .button {
   color: whitesmoke;
   font-weight: bolder;
-    box-shadow: 5px 10px 18px #888888;
-    background: orange;
-    border-radius: 25px;
-    padding: 1%;
-    border: none;
+  box-shadow: 5px 10px 18px #888888;
+  background: orange;
+  border-radius: 25px;
+  padding: 1%;
+  border: none;
 }
-.card {
-  /* Add shadows to create the "card" effect */
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 33%;
-  background: none;
+/* debug this in the future */
+.button:hover {
+  transform: scale(1.1, 1.1) !important;
 }
 
-/* On mouse-over, add a deeper shadow */
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-/* Add some padding inside the card container */
-.container {
-  padding: 2px 16px;
-}
 @media screen and (max-width: 600px) {
 .button{
   padding: 5%;
