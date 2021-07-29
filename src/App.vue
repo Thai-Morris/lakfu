@@ -1,19 +1,20 @@
 <template>
 <body>
-     <div>
+    
 
-  <img alt="Lakfu" class="animate__animated  animate__fadeIn" src="./assets/icons/target.png">
+  <img alt="Lakfu" style="height: 100px;" class="animate__animated  animate__fadeIn" src="./assets/icons/target.png">
   <h1 class="animate__animated animate__bounce"> Welcome to Lakfu </h1>
-  <router-link  to="/Investorlogin">  <button class="button animate__animated animate__backInLeft" >Investor Login</button> </router-link>
+  <router-link  to="/Investorlogin"> <button class="button animate__animated animate__backInLeft" >Investor Login</button> </router-link>
   <br>
-   <br> 
+  <br> 
   <router-link to="/Entreprenurlogin"><button class="button animate__animated animate__backInRight" style="background-color: yellow; color: black">Entreprenur Login</button></router-link>
-  <br>
-  <router-view/>
   
-  <!-- <button class="button animate__animated animate__backInLeft" >Investor Login</button> -->
-  <br>
-  </div>
+  <router-view v-slot="{Component}">
+    <transition name="fade" mode="out-in">
+    <Component :is="Component"/>
+    </transition>
+  </router-view>
+  
   </body>
 
 
@@ -41,6 +42,10 @@ h1{
   color: whitesmoke;
 }
 
+a{
+  text-decoration: none;
+}
+
 .button {
   color: whitesmoke;
   font-weight: bolder;
@@ -52,13 +57,21 @@ h1{
   
 }
 
-a{
-  text-decoration: none;
-}
 /* debug this in the future */
 .button:hover {
   transform: scale(1.1, 1.1) !important;
 }
+
+.fade-enter-from, 
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active{
+  transition: opacity 0.5s ease-out;
+}
+
 
 @media screen and (max-width: 600px) {
 .button{
